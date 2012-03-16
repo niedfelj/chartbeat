@@ -18,7 +18,7 @@ class Chartbeat
     @host = opts[:host]
   end
     
-  def method_missing(m, *args)
+  def method_missing(m, args={})
     super unless METHODS.include?(m) || DASHAPI_METHODS.include?(m)
 
     if DEPRECATED_METHODS.include?(m)
