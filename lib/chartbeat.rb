@@ -25,7 +25,7 @@ class Chartbeat
       warn "#{m} is a deprecated method. Use with caution!"
     end
 
-    query = *args
+    query = args
     query_to_perform = {:apikey => @apikey, :host => @host}
     DEFAULT_ARG_VALS.each do |k,v|
       if query && query[k]
